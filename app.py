@@ -1,5 +1,6 @@
-from flask import Flask, render_template
+from flask import Flask, render_template, jsonify
 from flask_bootstrap import Bootstrap
+from Realtorapi import get_realtor_data
 
 app = Flask(__name__)
 Bootstrap(app)
@@ -14,11 +15,14 @@ def map():
 
 @app.route("/apidata")
 def api():
-    return render_template('api.html')
+    data = get_realtor_data()
+    return jsonify(data)
 
 @app.route("/csvdata")
 def csv():
     return render_template('csv.html')
+
+
 
 if __name__ == '__main__':
     app.run(debug=True)
