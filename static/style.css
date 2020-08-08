@@ -25,6 +25,10 @@ body{
     margin-top: 50px;
     margin:3%;
 }
+#mymap{
+    height:1000px !important;
+    width:100% !important;
+}
 
 
 

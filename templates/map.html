@@ -1,6 +1,11 @@
 {% extends "base.html" %}
+{% block head %}
+{{super()}}
+{{flask_gmap.js}}
+
+{% endblock %}
 {% block content %}
-<h1>This is the map page</h1>
+{{flask_gmap.html}}
 
 {{super()}}
 {% endblock %}
