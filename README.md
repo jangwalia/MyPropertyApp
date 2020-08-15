@@ -1,8 +1,8 @@
 # Property App Project
 In this App User can serarch the property by entering the price range . Our App uses the Realtor CA's API and Google Map's API to get the desired results.
 # INITIAL SETUP
-1.Install VS Code which is the most populer Free IDE available for developers.
-1.Then Create The project folder in your Workspace Folder and name in Property App. All the folders will be inside this root folder from now.
+1. Install VS Code which is the most populer Free IDE available for developers.
+1. Then Create The project folder in your Workspace Folder and name in Property App. All the folders will be inside this root folder from now.
 Setting up a Python Virtual Environment
 When you create a Python application, it will use packages and modules that do NOT come as part of the standard Python library (e.g. csv or os).
 
