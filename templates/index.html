@@ -1,67 +1,52 @@
 {% extends "base.html" %}
+{% block head %}
+{{super()}}
+
+{% endblock %}
 {% block content %}
 
 
   <div class ="row content">
-    <div class ="col-md-3 order-2 order-md-1  d-flex justify-content-around">
-      <div class="row">
-        <div class="col-12 ">
-          <div class="card">
-            <img class="card-img-top" src="https://images.unsplash.com/photo-1556955112-28cde3817b0a?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80" alt="Card image cap">
-            <div class="card-body">
-              <h5 class="card-title">Homes</h5>
-              <p class="card-text">Surrey, BC,Canada.</p>
-              <a href="#" class="btn btn-primary">Check Details</a>
+    <div class ="col-12">
+      <form action = "/map" method ="GET">
+        <div class="form-group">
+          
+          <input type="text" name = "minimum" class="price" placeholder="Enter Minimum Price">
+          
+        </div>
+        <div class="form-group">
+          
+          <input type="text" name = "maximum" class="price"   placeholder="Enter Maximum Price">
+        </div>
+        
+        <button type="submit" class="btn btn-outline-primary btn-lg">Submit</button>
+      </form>
             </div>
           </div>
 
         </div>
-        <div class ="col-12 ">
-          <div class="card">
-            <img class="card-img-top" src="https://images.unsplash.com/photo-1560185127-6ed189bf02f4?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80">
-            <div class="card-body">
-              <h5 class="card-title">Townhouse</h5>
-              <p class="card-text">Surrey, BC,Canada.</p>
-              <a href="#" class="btn btn-primary">Check Details</a>
-            </div>
-          </div>
-        </div>
-      </div>
-      </div>
-      
-    
-      <div class ="col-md-6 order-1 order-md-2">
-        <img src="https://www.surrey.ca/images/pageImages/SurreyMap.jpg" class ="img-fluid" alt="This is immage">
-      </div>
-      <div class =" col-md-3 order-3 d-flex justify-content-around ">
-        <div class="row">
-          <div class="col-12 ">
-            <div class="card">
-              <img class="card-img-top" src="https://images.unsplash.com/photo-1556955112-28cde3817b0a?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80" alt="Card image cap">
-              <div class="card-body">
-                <h5 class="card-title">Homes</h5>
-                <p class="card-text">Surrey, BC,Canada.</p>
-                <a href="#" class="btn btn-primary">Check Details</a>
-              </div>
-            </div>
-  
-          </div>
-          <div class ="col-12 ">
-            <div class="card">
-              <img class="card-img-top" src="https://images.unsplash.com/photo-1560185127-6ed189bf02f4?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80">
-              <div class="card-body">
-                <h5 class="card-title">Townhouse</h5>
-                <p class="card-text">Surrey, BC,Canada.</p>
-                <a href="#" class="btn btn-primary">Check Details</a>
-              </div>
-            </div>
-          </div>
-        </div>
-        </div>
+        
+  <div class ="row">
+    <div class="col-12">
+      <img src="static/SurreyMap.jpg" class="img-fluid" alt="Map" id ="map_image">>
 
-    
+    </div>
+  </div>
+<div class="container">
+  <div class="row">
+    <div class="col-12">
+      <div>  <h2 style="font-family:stagsans,arial,helvetica,sans-serif;font-size:1.6em;font-weight:400;margin-top:0;text-decoration:none;color:#A3C139;">Mortgage rate comparison</h2>
+        <div class="widget" data-widget="mtg-table" data-purchase="true" data-lang="en"></div>
+        <div style="text-align:right;">  
+          <a href="https://www.ratehub.ca/" style="display:inline-block;width:80px;margin-top:.5em;margin-top:-1em">
+            <img src="https://www.ratehub.ca/assets/images/widget-logo.png" style="width:100%;" alt="Ratehub.ca logo"></a>
+          </div><script type="text/javascript" src="https://www.ratehub.ca/assets/js/widget-loader.js">
+          </script>
+          </div>
+    </div>
   </div>
 
+</div> 
 
 
 

@@ -1,9 +1,8 @@
-
-body{
-    background-color:#cacde8;
-   
-    
+*{
+    margin:0;
+    padding:0;
 }
+
 .container{
     padding:20px;
 }
@@ -21,13 +20,22 @@ body{
 #mainNavbar .nav-link:hover{
     color:red;
 }
+.price{
+    width:30%;
+    height:40px;
+    border-radius:10px;
+}
 .content{
     margin-top: 50px;
     margin:3%;
 }
-#mymap{
+#mymap {
     height:1000px !important;
     width:100% !important;
+}
+#map_image{
+    height:900px;
+    width:100%;
 }
 
 

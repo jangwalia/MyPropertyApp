@@ -1,4 +1,18 @@
 {% extends "base.html"  %}
 {% block content %}
-    {{ data | safe }}
+<div class="container">
+    <div class="row">
+      <div class="col-12">
+        <div>  <h2 style="font-family:stagsans,arial,helvetica,sans-serif;font-size:1.6em;font-weight:400;margin-top:0;text-decoration:none;color:#A3C139;">Mortgage rate comparison</h2>
+          <div class="widget" data-widget="mtg-table" data-purchase="true" data-lang="en"></div>
+          <div style="text-align:right;">  
+            <a href="https://www.ratehub.ca/" style="display:inline-block;width:80px;margin-top:.5em;margin-top:-1em">
+              <img src="https://www.ratehub.ca/assets/images/widget-logo.png" style="width:100%;" alt="Ratehub.ca logo"></a>
+            </div><script type="text/javascript" src="https://www.ratehub.ca/assets/js/widget-loader.js">
+            </script>
+            </div>
+      </div>
+    </div>
+  
+  </div> 
 {% endblock %}

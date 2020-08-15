@@ -2,15 +2,16 @@ import requests
 import csv
 import json
 
-def get_realtor_data():
+def get_realtor_data(minimum=800000,maximum=1000000):
+    
     url = 'https://api2.realtor.ca/Listing.svc/PropertySearch_Post'
     opts = {
         'LongitudeMin': -122.8884917, 
         'LongitudeMax': -122.7154137, 
         'LatitudeMin': 49.0160805, 
         'LatitudeMax': 49.0509935, 
-        'PriceMin': 800000, 
-        'PriceMax': 1200000,
+        'PriceMin':minimum, 
+        'PriceMax':maximum,
         'CultureId': 1,
         'ApplicationId': 1,
         'PropertySearchTypeId': 1,
@@ -20,10 +21,12 @@ def get_realtor_data():
     r = requests.post(url, opts)
     try:
         data = r.json()
+        
     except json.decoder.JSONDecodeError:
         print('There was a problem fetching API Data...')
         with open('data/realtordata.json',mode = 'r') as jsonfile:
             data = json.load(jsonfile)
+            return data
     
     else:
         print('Sucessfully loaded data')

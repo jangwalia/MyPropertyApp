@@ -1,4 +1,4 @@
-from flask import Flask, render_template, jsonify
+from flask import Flask, render_template, jsonify, request
 from flask_bootstrap import Bootstrap
 from flask_googlemaps import GoogleMaps, Map
 from Realtorapi import get_realtor_data, get_csv_data, set_markers
@@ -10,12 +10,15 @@ Bootstrap(app)
 
 @app.route("/")
 def index():
-    return render_template("index.html")
+   return render_template('index.html')
+    
 
 
 @app.route("/map")
 def mapview():
-    map_data = get_realtor_data()
+    minimum = int(request.args.get('minimum'))
+    maximum = int(request.args.get('maximum'))
+    map_data = get_realtor_data(minimum,maximum)
     map_markers = set_markers(map_data)
     mymap = Map(
         identifier="mymap",
@@ -29,7 +32,7 @@ def mapview():
 
 @app.route("/apidata")
 def api():
-    data = get_realtor_data()
+    data = get_realtor_data(minimum=800000,maximum=1000000)
     return jsonify(data)
 
 
@@ -41,8 +44,7 @@ def csv():
 
 @app.route("/scraper")
 def scraper():
-    html = coastcapital()
-    return render_template("scraper.html", data = html)
+    return render_template("scraper.html")
 
 
 if __name__ == '__main__':
