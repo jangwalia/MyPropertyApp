@@ -25,4 +25,4 @@ On Windows, run:
 venv\Scripts\activate
 Your virtual environment is active if you see the name venv prefixed to your terminal prompt like in the following:
 
-![image](https://github.com/surrey-digital-academy/full-stack-web-course/raw/master/Lesson_1/images/venv_activate.png)
+
