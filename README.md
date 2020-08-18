@@ -24,5 +24,5 @@ On Windows, run:
 
 venv\Scripts\activate
 Your virtual environment is active if you see the name venv prefixed to your terminal prompt like in the following:
-[!image](images/venv.png)
+(images/venv.png)
 
