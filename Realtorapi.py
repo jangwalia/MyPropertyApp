@@ -15,7 +15,7 @@ def get_realtor_data(minimum=800000,maximum=1000000):
         'CultureId': 1,
         'ApplicationId': 1,
         'PropertySearchTypeId': 1,
-        'RecordsPerPage': 2
+        'RecordsPerPage': 4
     }
 
     r = requests.post(url, opts)
